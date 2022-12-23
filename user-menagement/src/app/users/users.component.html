@@ -1,0 +1,21 @@
+<!-- <p>{{ user }}</p> -->
+<h2>我的用户</h2>
+<ul class="users">
+    <li *ngFor="let user of users" (click)="onSelect(user)" 
+        [class.selected]="user == selectedUser" >
+        <span class="badge">{{user.id}}</span>
+        {{user.name}}
+    </li>
+</ul>
+<div *ngIf="selectedUser">
+    <h2>{{ selectedUser.name }}</h2>
+    <div><span>id: </span>{{ selectedUser.id }}</div>
+    <!-- <div><span>name: </span>{{ user.name }}</div> -->
+    <div>
+        <label>
+            name:
+                <input type="text" [(ngModel)]="selectedUser.name" placeholder="name" />
+        </label>
+    </div>
+    
+</div>
