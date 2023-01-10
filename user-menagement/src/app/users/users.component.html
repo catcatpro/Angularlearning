@@ -1,11 +1,24 @@
 <!-- <p>{{ user }}</p> -->
 <h2>我的用户</h2>
+
 <ul class="users">
-    <li *ngFor="let user of users" (click)="onSelect(user)" 
-        [class.selected]="user == selectedUser" >
-        <span class="badge">{{user.id}}</span>
-        {{user.name}}
+    <li *ngFor="let user of users" 
+        >
+        <a routerLink="/detail/{{user.id}}">
+            <span class="badge">{{user.id}}</span>
+            {{user.name}}
+        </a>
+
+        <button (click)="delete(user)" title="delete user" class="delete">X</button>
     </li>
 </ul>
 
-<app-user-detail [user]="selectedUser"></app-user-detail>
+
+<div>
+    <label for="">User Name: 
+    <input #userName />
+    </label>
+    <button (click)="add(userName.value); userName.value=''">
+        add
+    </button>
+</div>

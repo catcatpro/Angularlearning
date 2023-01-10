@@ -8,7 +8,7 @@ import { UserService } from '../user.service'
 })
 export class UsersComponent implements OnInit {
   // user = "老卫"
-  public selectedUser:User|undefined
+  // public selectedUser:User|undefined
   public users:User[]|undefined
 
   
@@ -18,13 +18,22 @@ export class UsersComponent implements OnInit {
     this.getUsers()
   }
 
-  onSelect(user: User):void
-  {
-    this.selectedUser = user
-  }
 
   getUsers():void{
     // this.users = this.userService.getUsers()
     this.userService.getUsers().subscribe(users => this.users = users)
+  }
+
+  add(name: string): void{
+    name = name.trim()
+    if(!name) return;
+    this.userService.addUser({ name } as User)
+      .subscribe(user => {
+        this.users?.push(user)
+      })
+  }
+
+  delete(user: User):void{
+    this.users = this.users?.filter(h => h != user)
   }
 }
