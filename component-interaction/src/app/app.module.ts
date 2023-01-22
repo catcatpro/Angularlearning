@@ -2,7 +2,7 @@
  * @Author: catcatproer
  * @Date: 2023-01-11 10:02:41
  * @LastEditors: catcatproer
- * @LastEditTime: 2023-01-19 10:44:28
+ * @LastEditTime: 2023-01-22 12:21:05
  * @FilePath: \component-interaction\src\app\app.module.ts
  * @Description: 
  * 
@@ -21,7 +21,7 @@ import { VersionChildComponent } from './version-child.component';
 import { VersionParentComponent } from './version-parent.component';
 import { VoteTakerComponent } from './vote.taker.component'
 import { VoterComponent } from './voter.component'
-import { CountdownParentComponent } from './countdown-parent.compoent';
+import { CountdownViewChildParentComponent } from './countdown-parent.compoent';
 import { CountdownTimerComponent } from './countdown-timer.component';
 
 @NgModule({
@@ -35,7 +35,7 @@ import { CountdownTimerComponent } from './countdown-timer.component';
     VersionChildComponent,
     VoteTakerComponent,
     VoterComponent,
-    CountdownParentComponent,
+    CountdownViewChildParentComponent,
     CountdownTimerComponent
   ],
   imports: [

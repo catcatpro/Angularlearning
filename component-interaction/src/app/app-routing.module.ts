@@ -2,7 +2,7 @@
  * @Author: catcatproer
  * @Date: 2023-01-11 10:02:41
  * @LastEditors: catcatproer
- * @LastEditTime: 2023-01-19 10:46:39
+ * @LastEditTime: 2023-01-22 12:23:02
  * @FilePath: \component-interaction\src\app\app-routing.module.ts
  * @Description: 
  * 
@@ -11,7 +11,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { VoteTakerComponent } from './vote.taker.component'
-import { CountdownParentComponent } from './countdown-parent.compoent';
+import { CountdownViewChildParentComponent } from './countdown-parent.compoent';
 
 const routes: Routes = [
   {
@@ -22,7 +22,7 @@ const routes: Routes = [
   {
     title: 'CountdownTimer',
     path: 'countdown-timer',
-    component: CountdownParentComponent,
+    component: CountdownViewChildParentComponent,
   }
 ];
 
