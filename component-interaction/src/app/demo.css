@@ -1,0 +1,12 @@
+.seconds{
+    color: #fff;
+    font-size:48px;
+    background-color: #000;
+    width: 56px;
+    /* display: inline-block; */
+    height:56px;
+    line-height: 1;
+    text-align: center;
+    /* display: inline-block; */
+}
+
