@@ -2,7 +2,7 @@
  * @Author: catcatproer
  * @Date: 2023-01-11 10:02:41
  * @LastEditors: catcatproer
- * @LastEditTime: 2023-01-22 12:21:05
+ * @LastEditTime: 2023-01-23 13:30:49
  * @FilePath: \component-interaction\src\app\app.module.ts
  * @Description: 
  * 
@@ -23,7 +23,8 @@ import { VoteTakerComponent } from './vote.taker.component'
 import { VoterComponent } from './voter.component'
 import { CountdownViewChildParentComponent } from './countdown-parent.compoent';
 import { CountdownTimerComponent } from './countdown-timer.component';
-
+import { AstronautComponent } from './astronaut.component';
+import { MissionControlComponent } from './missioncontrol.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,9 @@ import { CountdownTimerComponent } from './countdown-timer.component';
     VoteTakerComponent,
     VoterComponent,
     CountdownViewChildParentComponent,
-    CountdownTimerComponent
+    CountdownTimerComponent,
+    MissionControlComponent,
+    AstronautComponent
   ],
   imports: [
     BrowserModule,
