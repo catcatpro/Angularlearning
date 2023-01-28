@@ -2,7 +2,7 @@
  * @Author: catcatproer
  * @Date: 2023-01-11 10:02:41
  * @LastEditors: catcatproer
- * @LastEditTime: 2023-01-28 11:15:05
+ * @LastEditTime: 2023-01-28 11:29:13
  * @FilePath: \component-interaction\src\app\app.module.ts
  * @Description: 
  * 
@@ -26,6 +26,7 @@ import { CountdownTimerComponent } from './countdown-timer.component';
 import { AstronautComponent } from './astronaut.component';
 import { MissionControlComponent } from './missioncontrol.component';
 import { UserControlsComponent } from './user-controls.component';
+import { UserTeamComponent } from './user-team.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { UserControlsComponent } from './user-controls.component';
     CountdownTimerComponent,
     MissionControlComponent,
     AstronautComponent,
-    UserControlsComponent
+    UserControlsComponent,
+    UserTeamComponent,
   ],
   imports: [
     BrowserModule,

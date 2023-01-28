@@ -1,0 +1,13 @@
+ul{
+    list-style: none;
+    font-size: 24px;
+}
+
+
+ul > li{
+    background-color: #dfe6e9;
+    margin-bottom: 8px;
+    padding:8px 12px;
+    border-radius: 12px;
+    font-size: 16px;
+}
