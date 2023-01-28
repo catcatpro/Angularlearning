@@ -2,7 +2,7 @@
  * @Author: catcatproer
  * @Date: 2023-01-11 10:02:41
  * @LastEditors: catcatproer
- * @LastEditTime: 2023-01-23 13:30:49
+ * @LastEditTime: 2023-01-28 11:15:05
  * @FilePath: \component-interaction\src\app\app.module.ts
  * @Description: 
  * 
@@ -25,6 +25,7 @@ import { CountdownViewChildParentComponent } from './countdown-parent.compoent';
 import { CountdownTimerComponent } from './countdown-timer.component';
 import { AstronautComponent } from './astronaut.component';
 import { MissionControlComponent } from './missioncontrol.component';
+import { UserControlsComponent } from './user-controls.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,8 @@ import { MissionControlComponent } from './missioncontrol.component';
     CountdownViewChildParentComponent,
     CountdownTimerComponent,
     MissionControlComponent,
-    AstronautComponent
+    AstronautComponent,
+    UserControlsComponent
   ],
   imports: [
     BrowserModule,

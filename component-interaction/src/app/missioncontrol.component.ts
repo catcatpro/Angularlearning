@@ -1,3 +1,13 @@
+/*
+ * @Author: catcatproer
+ * @Date: 2023-01-23 11:53:22
+ * @LastEditors: catcatproer
+ * @LastEditTime: 2023-01-28 10:41:10
+ * @FilePath: \component-interaction\src\app\missioncontrol.component.ts
+ * @Description: 
+ * 
+ * Copyright (c) 2023 by catcatproer, All Rights Reserved. 
+ */
 import { Component } from "@angular/core";
 import { MissionService } from "./mission.service";
 import { ThisReceiver } from "@angular/compiler";
@@ -13,6 +23,7 @@ import { ThisReceiver } from "@angular/compiler";
             <li *ngFor="let event of history">{{event}}</li>
         </ul>        
     `,
+    styles: ['button{ font-size: 28px;padding: 8px 12px; border:0; }'],
     providers: [MissionService]
 })
 
