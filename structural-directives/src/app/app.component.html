@@ -1,0 +1,25 @@
+<!--
+ * @Author: catcatproer
+ * @Date: 2023-03-20 10:13:23
+ * @LastEditors: catcatproer
+ * @LastEditTime: 2023-03-20 10:58:22
+ * @FilePath: \structural-directives\src\app\app.component.html
+ * @Description: 
+ * 
+ * Copyright (c) 2023 by catcatproer, All Rights Reserved. 
+-->
+
+
+<div>
+  <h1>
+    {{ title }}
+  </h1>
+
+  <p *appUnless="true">
+      该段不显示，因为appUnless为true
+  </p>
+
+  <p *appUnless="false">
+    该段显示 ，因为appUnless为false
+  </p>
+</div>

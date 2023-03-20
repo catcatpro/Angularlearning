@@ -1,0 +1,37 @@
+<!--
+ * @Author: catcatproer
+ * @Date: 2023-03-07 10:48:04
+ * @LastEditors: catcatproer
+ * @LastEditTime: 2023-03-20 10:09:37
+ * @FilePath: \directive\src\app\app.component.html
+ * @Description: 
+ * 
+ * Copyright (c) 2023 by catcatproer, All Rights Reserved. 
+-->
+<p *ngIf="true" [appHighlight]="color" [defaultColor]="'violet'">元素高亮</p>
+<p *ngIf="false" [appHighlight]="''" [defaultColor]="'violet'">元素高亮</p>
+<!-- <p appHighlight [highlightColor]="'orange'">元素高亮</p> -->
+
+<hr>
+<h3>*NgSwitch</h3>
+<div [ngSwitch]="color">
+    <span *ngSwitchCase="'aqua'" style="display: block; background-color: aqua; width: 40px;height: 40px; color:white;" >aqua</span>
+    <span *ngSwitchCase="'red'" style="display: block; background-color: red; width: 40px;height: 40px;color: white;">red</span>
+    <span *ngSwitchCase="'blue'" style="display: block; background-color:blue; width: 40px;height: 40px;color: white;">blue</span>
+    <span *ngSwitchDefault style="display: block; background-color: gray; width: 40px;height: 40px; color: white;">gray</span>
+</div>
+
+<p>Hip!</p>
+<ng-template> 
+<p>Hip!</p>
+
+</ng-template>
+<p>Hip!</p>
+
+<p>
+    I turned the corner
+    <ng-container *ngIf="color">
+            and saw {{color }} . I waved
+    </ng-container>
+    and continued on my way.
+</p>
