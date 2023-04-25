@@ -1,0 +1,25 @@
+ul{
+    list-style-type: none;
+}
+
+ul li{
+    width: 400px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 35px;
+    display: block;
+    padding: 20px;
+}
+ul li.active{
+    background-color:#a19f9d;
+    width: 420px;
+    height: 220px;
+    line-height: 220px;
+
+}
+ul li.inactive{
+    background-color: #c8c6c4;
+
+}
