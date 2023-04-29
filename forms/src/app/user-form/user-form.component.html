@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>用户表单</h2>
+    {{diagnostic}}
+
+<form (ngSubmit)="onSubmit()" #userForm="ngForm">
+     <div class="form-group">
+        <label for="name">姓名</label>
+        <input type="text" name="name" class="form-control" id="name" required 
+            [(ngModel)]="model.name" #name="ngModel" />
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                姓名不能为空
+            </div>
+     </div>
+
+     <div class="form-group">
+        <label for="age">年龄</label>
+        <input type="text" name="age" class="form-control" id="age" required
+        [(ngModel)]="model.age">
+     </div>
+
+     <div class="form-group">
+        <label for="job">职业</label>
+        <select  id="job" class="form-control" required
+        [(ngModel)]="model.job" name="job">
+            <option *ngFor="let job of jobs" [value]="job">{{job}}</option>
+        </select>
+     </div>
+     <button type="submit" class="btn btn-success" [disabled]="!userForm.form.valid">Submit</button>
+     <button type="button" class="btn btn-default" (click)="newUser(); userForm.reset()">新增用户</button>
+</form>
+</div>
