@@ -1,0 +1,34 @@
+<form [formGroup]="userForm" #formDir="ngForm" appIdentityRevealed>
+    <div class="form-group">
+        <label for="name">姓名</label>
+        <input type="text" id="name" class="form-control" formControlName="name" required />
+    
+        <div *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="alert alert-danger">
+            <div *ngIf="name?.errors?.['required']">
+                姓名不能为空
+            </div>
+    
+            <div *ngIf="name?.errors?.['minlength']">
+                姓名至少两个字符以上
+            </div>
+    
+            <div *ngIf="name?.errors?.['forbiddenName']">
+                姓名不能老张
+            </div>
+        </div>
+
+     
+    </div>
+
+    <div class="form-group">
+        <label for="age">年龄</label>
+        <input type="text" id="age" class="form-control" formControlName="age" required />
+    
+
+     
+    </div>
+    <div *ngIf="userForm.errors?.['identityRevealed'] && (userForm.touched || userForm.dirty)" class="cross-validation-error-message alert alert-danger">
+        姓名和年龄不相符
+    </div>
+</form>
+
