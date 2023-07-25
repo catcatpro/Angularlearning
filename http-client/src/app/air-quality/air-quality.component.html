@@ -1,4 +1,4 @@
-<button (click)="showAirQualityData">获取数据</button>
+<button (click)="showAirQualityData()">获取数据</button>
 <div *ngIf="airQuality">
     <div>状态：{{ airQuality.status }}</div>
     <div>AQI：{{ airQuality.data.aqi }}</div>

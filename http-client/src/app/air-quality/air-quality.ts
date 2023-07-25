@@ -4,6 +4,6 @@ export interface AirQuality{
 }
 
 export interface Aqi{
-aqi:number
+    aqi:number
     time:any
 }

@@ -16,12 +16,18 @@ export class AirQualityComponent implements OnInit {
   }
 
   showAirQualityData(){
+ /*    this.airQualityService.getAirData().subscribe(
+      (airQualityData: AirQuality|any) => this.airQuality = (() => {
+        console.log(airQualityData['data']['time'])
+        return {
+          status: airQualityData['status'],
+          data: { aqi:airQualityData['data']['aqi'],  time: airQualityData['data']['time']['s']},
+         
+        }
+      })()
+    ) */
     this.airQualityService.getAirData().subscribe(
-      (airQualityData: AirQuality|any) => this.airQuality = {
-        status: airQualityData['status'],
-        data: { aqi:airQualityData['data']['api'],  time: airQualityData['data']['time']},
-       
-      }
+      (airQualityData: AirQuality) => this.airQuality = airQualityData
     )
   }
 }

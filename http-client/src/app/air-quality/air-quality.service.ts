@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AirQuality } from './air-quality';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,8 @@ export class AirQualityService {
   airQualityUrl = "https://api.waqi.info/feed/@14332/?token=8d1ee363ec11a5b67044c3593c0c34e44c3d8084"
 
   getAirData(){
-     return this.http.get(this.airQualityUrl)
+    //  return this.http.get(this.airQualityUrl)
+    //返回类型检查的响应
+     return this.http.get<AirQuality>(this.airQualityUrl)
   }
 }
