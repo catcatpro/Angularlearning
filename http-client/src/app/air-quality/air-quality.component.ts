@@ -9,8 +9,9 @@ import { AirQuality } from './air-quality';
 })
 export class AirQualityComponent implements OnInit {
   constructor(private airQualityService: AirQualityService){}
-  airQuality?:AirQuality
-
+  airQuality?:AirQuality|null
+  headers?:string[]
+  error?:any
   ngOnInit(): void {
       
   }
@@ -29,5 +30,16 @@ export class AirQualityComponent implements OnInit {
     this.airQualityService.getAirData().subscribe(
       (airQualityData: AirQuality) => this.airQuality = airQualityData
     )
+  }
+
+  showAirQualityResponse(){
+    this.airQualityService.getAirDataResponse().subscribe(resp=>{
+      const keys =  resp.headers.keys()
+      this.headers = keys.map(key => `${key}: ${resp.headers.get(key)}`)
+      this.airQuality = resp.body
+    }, (error: any) => {
+      console.error(error)
+      this.error = error
+    })
   }
 }
