@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AirQualityService } from './air-quality.service';
 import { AirQuality } from './air-quality';
+import { DownloaderService } from '../downloader.service';
 
 @Component({
   selector: 'app-air-quality',
@@ -8,7 +9,7 @@ import { AirQuality } from './air-quality';
   styleUrls: ['./air-quality.component.css']
 })
 export class AirQualityComponent implements OnInit {
-  constructor(private airQualityService: AirQualityService){}
+  constructor(private airQualityService: AirQualityService, private downloader: DownloaderService){}
   airQuality?:AirQuality|null
   headers?:string[]
   error?:any
@@ -40,6 +41,12 @@ export class AirQualityComponent implements OnInit {
     }, (error: any) => {
       console.error(error)
       this.error = error
+    })
+  }
+
+  getTextData(){
+    this.downloader.getTextFile("/styles.css").subscribe(res => {
+      console.log("res body", res)
     })
   }
 }

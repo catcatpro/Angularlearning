@@ -1,5 +1,6 @@
 <button (click)="showAirQualityData()">获取数据</button>
 <button (click)="showAirQualityResponse()">显示数据及http头</button>
+<button (click)="getTextData()">获取非JSON格式的数据</button>
 <div *ngIf="airQuality">
     <div>状态：{{ airQuality.status }}</div>
     <div>AQI：{{ airQuality.data.aqi }}</div>

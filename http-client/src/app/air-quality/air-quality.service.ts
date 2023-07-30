@@ -22,7 +22,7 @@ export class AirQualityService {
     return this.http.get<AirQuality>(
       this.airQualityUrl, {observe: 'response'}
     ).pipe(
-      retry(3) //重试3次
+      retry(3) //重试3次／
       ,catchError(this.handleError))
   }
 
