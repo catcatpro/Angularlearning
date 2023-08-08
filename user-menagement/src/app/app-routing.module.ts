@@ -7,6 +7,10 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: "users",
+    redirectTo: "/niceusers"
+  },
+  {
+    path: "niceusers",
     component: UsersComponent
   },
   {
@@ -27,7 +31,7 @@ const routes: Routes = [
 
   exports: [RouterModule],
   imports:[
-    RouterModule.forRoot(routes) 
+    RouterModule.forRoot(routes, { enableTracing: true }) 
   ]
 })
 export class AppRoutingModule { }
