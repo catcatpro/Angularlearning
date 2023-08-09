@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+h1{
+    color: #369;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+}
+
+h2, h3{
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+body{
+    margin: 3em;
+
+}
+
+
+body, input[text], button{
+    color: #888;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+}
+
+a{
+    cursor: pointer;
+    cursor: hand;
+}
+
+button{
+    font-family: Arial;
+    background-color: #eeee;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+
+}
+
+button:hover{
+    background-color: #cfd7dc;
+
+}
+
+button:disabled{
+    background-color: #eeee;
+    color: #aaa;
+    cursor: auto;
+}
+
+nav a{
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-right: 15px;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #eee;
+    border-radius: 4px;
+}
+
+nav a:visited, a:link{
+    color: #607d8b;
+}
+nav a:hover{
+    color: #039be5;
+    background-color: #cfd8dc;
+}
+
+nav a.active{
+    color: #039be5;
+}
+
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
