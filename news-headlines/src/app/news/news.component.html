@@ -1,0 +1,49 @@
+<!-- <mat-card>
+    <mat-card-header>
+        <mat-card-title>急诊科里的“火凤凰”</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-toolbar>
+            <mat-toolbar-row>
+                <img src="https://dfzximg02.dftoutiao.com/news/20230826/20230826090536_b0b06a3a760eebc56c3406d1040fb0d6_1_mwpm_03201609.jpeg" alt="">
+                <img src="https://dfzximg02.dftoutiao.com/news/20230826/20230826090536_b0b06a3a760eebc56c3406d1040fb0d6_2_mwpm_03201609.jpeg" alt="">
+                <img src="https://dfzximg02.dftoutiao.com/news/20230826/20230826090536_b0b06a3a760eebc56c3406d1040fb0d6_3_mwpm_03201609.jpeg" alt="">
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </mat-card-content>
+    <br />
+    <mat-divider ></mat-divider>
+</mat-card>
+
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>"创新管理模式　让流动党员“心有归处”</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-toolbar>
+            <mat-toolbar-row>
+                <img src="https://dfzximg02.dftoutiao.com/news/20230826/20230826085505_5d55a9cb8aa1578e9935a04732c27453_1_mwpm_03201609.jpeg" alt="">
+                
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </mat-card-content>
+    <br />
+    <mat-divider></mat-divider>
+</mat-card> -->
+
+<mat-card *ngFor="let n of news">
+    <a routerLink="/news" [queryParams]="{ newsUrl: n.url }">
+        <mat-card-header>
+            <mat-card-title>{{ n.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content *ngIf="n.thumbnail_pic_s">
+            <mat-toolbar>
+                <mat-toolbar-row>
+                    <img *ngIf="n.thumbnail_pic_s" src="{{n.thumbnail_pic_s}}" alt="">
+                    <img *ngIf="n.thumbnail_pic_s02" src="{{n.thumbnail_pic_s02}}" alt="">
+                    <img *ngIf="n.thumbnail_pic_s03" src="{{n.thumbnail_pic_s03}}" alt="">
+                </mat-toolbar-row>
+            </mat-toolbar>
+        </mat-card-content>
+    </a>
+</mat-card>
